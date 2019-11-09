@@ -1,41 +1,18 @@
 {
-  // http://eslint.org/docs/rules/
-
-  "ecmaFeatures": {
-    "arrowFunctions": true,                     // enable arrow functions
-    "binaryLiterals": false,                    // enable binary literals
-    "blockBindings": true,                      // enable let and const (aka block bindings)
-    "classes": true,                            // enable classes
-    "defaultParams": true,                      // enable default function parameters
-    "destructuring": true,                      // enable destructuring
-    "forOf": true,                              // enable for-of loops
-    "generators": true,                         // enable generators
-    "modules": true,                            // enable modules and global strict mode
-    "objectLiteralComputedProperties": true,    // enable computed object literal property names
-    "objectLiteralDuplicateProperties": true,   // enable duplicate object literal properties in strict mode
-    "objectLiteralShorthandMethods": true,      // enable object literal shorthand methods
-    "objectLiteralShorthandProperties": true,   // enable object literal shorthand properties
-    "octalLiterals": false,                     // enable octal literals
-    "regexUFlag": false,                        // enable the regular expression u flag
-    "regexYFlag": false,                        // enable the regular expression y flag
-    "restParams": true,                         // enable the rest parameters
-    "spread": true,                             // enable the spread operator
-    "superInFunctions": true,                   // enable super references inside of functions
-    "templateStrings": true,                    // enable template strings
-    "unicodeCodePointEscapes": false,           // enable code point escapes
-    "globalReturn": false                      // allow return statements in the global scope
-  },
-
   "env": {
     "browser": true      // browser global variables
   },
 
   "parserOptions": {
-    "ecmaVersion": 7,
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
 
   "extends": "eslint:recommended",
+
+  "globals": {
+    "Proxy": false,
+  },
 
   "root": true,
 
@@ -45,7 +22,7 @@
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "camelcase": ["error", { "properties": "always" }],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": ["error", { "before": false, "after": true }],
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
